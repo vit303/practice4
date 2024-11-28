@@ -9,25 +9,34 @@ namespace practice4
     internal class IntegerNumbersArray
     {
         private List<int> array = new List<int>();
-        private int count = 0;
 
-        public IntegerNumbersArray() {
-
-        }
+        public IntegerNumbersArray() { }
 
         public IntegerNumbersArray(int number)
         {
             array.Add(number);
-            this.count++;
         }
 
-        public void AddNumber(int num) {
+        public void AddNumber(int num)
+        {
             array.Add(num);
-            this.count++;
         }
 
-        public List<int> GetList() {
+        public List<int> GetList()
+        {
             return array;
         }
+
+        public int GetSum()
+        {
+            return array.Sum();
+        }
+
+        public bool IsEvenArray()
+        {
+            return array.All(num => num % 2 == 0);
+        }
+
+        public int Count => array.Count;
     }
 }
